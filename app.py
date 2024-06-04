@@ -26,8 +26,8 @@ def user_input_features():
 df1 = user_input_features()
 
 # 数据标准化
-scaler = joblib.load('app/scaler.joblib')
-gbc = joblib.load('app/model.joblib')
+scaler = joblib.load('scaler.joblib')
+gbc = joblib.load('model.joblib')
 df3 = scaler.transform(df1)
 df2 = pd.DataFrame(df3,index=[0])
 df2.columns = df1.columns
@@ -35,7 +35,7 @@ df2.iloc[0, 5] = df1.iloc[0, 5]
 df2.iloc[0, 6] = df1.iloc[0, 6]
 xname = df2.columns
 # 数据解释
-explainer = joblib.load('app/shap.joblib')
+explainer = joblib.load('shap.joblib')
 shap_values = explainer.shap_values(df2)
 shap_values1 = explainer(df2)
 shap_values2 = explainer(df1)
