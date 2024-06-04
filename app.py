@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import shap
 import joblib
+import matplotlib
 
 # 用户输入数据
 def user_input_features():
