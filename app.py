@@ -42,6 +42,7 @@ shap_values1 = explainer(df2)
 shap_values2 = explainer(df1)
 shap_values2.data, shap_values1.data = shap_values1.data, shap_values2.data
 
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 if st.button("确认"):
     a = shap_values[0].sum()-0.034
