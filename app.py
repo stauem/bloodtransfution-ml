@@ -1,19 +1,7 @@
-import pickle
 import streamlit as st
 import numpy as np
 import pandas as pd
-from matplotlib import pyplot as plt
-from sklearn.preprocessing import StandardScaler
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.model_selection import train_test_split
 import shap
-from sklearn.model_selection import GridSearchCV
-from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.metrics import RocCurveDisplay, roc_curve, auc, accuracy_score
-from sklearn.metrics import precision_recall_curve
-from sklearn.metrics import confusion_matrix
-from imblearn.over_sampling import BorderlineSMOTE
-from imblearn.under_sampling import TomekLinks
 import joblib
 
 # 用户输入数据
