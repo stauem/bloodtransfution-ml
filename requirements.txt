@@ -5,4 +5,3 @@ altair>=4.0
 shap==0.39.0
 joblib
 matplotlib >=3.9.0
-numpy==1.21.2
