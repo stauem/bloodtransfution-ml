@@ -8,7 +8,7 @@ import matplotlib
 # 用户输入数据
 def user_input_features():
     age = st.number_input("年龄（岁）:", min_value=0, max_value=120)
-    weight = st.number_input("体重（kg）:", min_value=0, max_value=200)
+    weight = st.number_input("体重（kg）:", min_value=5, max_value=200)
     HB = st.number_input("血红蛋白（g/L）:", min_value=80, max_value=200)
     ALB = st.number_input("白蛋白（g/L）:", min_value=0, max_value=60)
     Operationtime = st.number_input("预计手术时间（分钟）:", min_value=1, max_value=1500)
@@ -62,6 +62,7 @@ if st.button("确认"):
     # fig = shap.force_plot(explainer.expected_value, shap_values[0], df2[xname].iloc[0])
     fig = shap.plots.waterfall(shap_values1[0])
     st.pyplot(fig)
+
 
 
 
